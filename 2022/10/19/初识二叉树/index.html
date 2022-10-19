@@ -16,15 +16,15 @@
   <meta name="author" content="Sothothz">
   <meta name="keywords" content="">
   
-    <meta name="description" content="二叉树  二叉树的定义 二叉树是结点的有限集合，该集合或者为空集，或者由一个根和它互不相交的、同为二叉树的左子树和右子树组成。 二叉树的性质  \(二叉树的第i层上最多有2^{i-1}个结点。\) \(高度为h的二叉树上至多有2^h-1个结点。\) \(包含n个结点的二叉树的高度至少为log_2{(n+1)},最高为n。\) \(任意一棵二叉树中，若叶结点的数量为a，度为2的结点">
+    <meta name="description" content="二叉树  二叉树的定义 二叉树是结点的有限集合，该集合或者为空集，或者由一个根和它互不相交的、同为二叉树的左子树和右子树组成。 特殊二叉树的定义  高度为h的二叉树恰好有\(2^h-1\)个结点时称为满二叉树。 一棵二叉树中，只有最下面两层结点的度可以小于2，并且最下层的叶结点集中在靠左的若干位置上，这样的二叉树称为完全二叉树。 不存在度为1的结点的二叉树称为扩充二叉树，又称为2-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识二叉树">
 <meta property="og:url" content="http://example.com/2022/10/19/%E5%88%9D%E8%AF%86%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="门之钥—邶暝的个人博客">
-<meta property="og:description" content="二叉树  二叉树的定义 二叉树是结点的有限集合，该集合或者为空集，或者由一个根和它互不相交的、同为二叉树的左子树和右子树组成。 二叉树的性质  \(二叉树的第i层上最多有2^{i-1}个结点。\) \(高度为h的二叉树上至多有2^h-1个结点。\) \(包含n个结点的二叉树的高度至少为log_2{(n+1)},最高为n。\) \(任意一棵二叉树中，若叶结点的数量为a，度为2的结点">
+<meta property="og:description" content="二叉树  二叉树的定义 二叉树是结点的有限集合，该集合或者为空集，或者由一个根和它互不相交的、同为二叉树的左子树和右子树组成。 特殊二叉树的定义  高度为h的二叉树恰好有\(2^h-1\)个结点时称为满二叉树。 一棵二叉树中，只有最下面两层结点的度可以小于2，并且最下层的叶结点集中在靠左的若干位置上，这样的二叉树称为完全二叉树。 不存在度为1的结点的二叉树称为扩充二叉树，又称为2-">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-19T08:50:34.000Z">
-<meta property="article:modified_time" content="2022-10-19T09:04:17.827Z">
+<meta property="article:modified_time" content="2022-10-19T09:39:57.888Z">
 <meta property="article:author" content="Sothothz">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
@@ -278,27 +278,24 @@
                 
                 <h1 id="二叉树">二叉树</h1>
 <ol type="1">
-<li>二叉树的定义
-二叉树是结点的有限集合，该集合或者为空集，或者由一个根和它互不相交的、同为二叉树的左子树和右子树组成。</li>
-<li>二叉树的性质
-<ol type="1">
-<li><span
-class="math inline">\(二叉树的第i层上最多有2^{i-1}个结点。\)</span></li>
-<li><span
-class="math inline">\(高度为h的二叉树上至多有2^h-1个结点。\)</span></li>
-<li><span
-class="math inline">\(包含n个结点的二叉树的高度至少为log_2{(n+1)},最高为n。\)</span></li>
-<li><span
-class="math inline">\(任意一棵二叉树中，若叶结点的数量为a，度为2的结点的数量为b,则a=b+1成立。\)</span>
-<strong>特殊二叉树的定义</strong></li>
-</ol>
+<li><p>二叉树的定义
+二叉树是结点的有限集合，该集合或者为空集，或者由一个根和它互不相交的、同为二叉树的左子树和右子树组成。</p>
+<p><strong>特殊二叉树的定义</strong></p>
 <ul>
 <li>高度为h的二叉树恰好有<span
 class="math inline">\(2^h-1\)</span>个结点时称为<strong>满二叉树</strong>。</li>
 <li>一棵二叉树中，只有最下面两层结点的度可以小于2，并且最下层的叶结点集中在靠左的若干位置上，这样的二叉树称为<strong>完全二叉树</strong>。</li>
 <li>不存在度为1的结点的二叉树称为<strong>扩充二叉树</strong>，又称为<strong>2-树</strong>。</li>
-</ul>
-<ol start="5" type="1">
+</ul></li>
+<li><p>二叉树的性质</p>
+<ol type="1">
+<li>二叉树的第i层上最多有<span
+class="math inline">\(2^{i-1}\)</span>个结点。</li>
+<li>高度为h的二叉树上至多有<span
+class="math inline">\(2^h-1\)</span>个结点。</li>
+<li>包含n个结点的二叉树的高度至少为<span
+class="math inline">\(log_2{(n+1)}\)</span>,最高为n。</li>
+<li>任意一棵二叉树中，若叶结点的数量为a，度为2的结点的数量为b,则a=b+1成立。</li>
 <li>具有n个结点的完全二叉树的高度为<span
 class="math inline">\(log_2{(n-1)}\)</span>。</li>
 <li>一棵包含n个结点的完全二叉树，对树中的结点按从上到下、从左到右的顺序，从0到n-1编号，设树中某个结点的编号为i,则有以下关系成立：
@@ -309,7 +306,7 @@ class="math inline">\(log_2{(n-1)}\)</span>。</li>
 <li>若2i+2&lt;n,则该结点有右孩子，该右孩子结点的编号为2i+2。</li>
 </ol></li>
 </ol></li>
-<li>二叉树的存储实现和基本运算
+<li><p>二叉树的存储实现和基本运算</p>
 <ol type="1">
 <li>二叉树结点结构体 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">btnode</span></span><br><span class="hljs-class">&#123;</span><br> ElemType element;<br> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">btnode</span> *<span class="hljs-title">lchild</span>;</span><br> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">btnode</span> *<span class="hljs-title">rchild</span>;</span><br> &#125;BTNode;<br></code></pre></td></tr></table></figure></li>
 <li>二叉树结构体 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">bianrytree</span></span><br><span class="hljs-class">&#123;</span><br>   BTNode *root;<br>&#125;BianrTree;<br></code></pre></td></tr></table></figure></li>
